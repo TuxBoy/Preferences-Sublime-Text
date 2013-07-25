@@ -1,0 +1,14 @@
+[
+
+  { "key": ["ctrl+o"], "command": "show_overlay", "args": {"overlay": "goto"} },
+	{ "keys": ["ctrl+t"], "command": "auto_complete" },
+	{ "keys": ["ctrl+shift+o"], "command": "open_dir", "args": {"dir": "$file_path", "file": "$file_name"} },
+    { "keys": ["ctrl+shift+down"], "command": "duplicate_line" },
+	{ "keys": ["ctrl+e"], "command": "insert_snippet", "args": {"contents": "<?php echo $1; ?>$2"}},
+	{ "keys": ["ctrl+d"], "command": "expand_selection", "args": {"to": "word"} },
+	{ "keys": ["super+d"], "command": "expand_selection", "args": {"to": "scope"},  "context":
+		[
+			{ "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
+		]
+	},
+]
